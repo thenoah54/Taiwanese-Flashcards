@@ -2,7 +2,6 @@ import random
 import os
 import time
 import customtkinter
-from PIL import Image
 import copy
 
 class Vocabulary(customtkinter.CTk):
