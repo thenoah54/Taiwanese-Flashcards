@@ -320,6 +320,34 @@ class Vocabulary(customtkinter.CTk):
             command=self.start_quiz_chapter_8_english)
         chapter_8_english_button.grid(row=10, column=3, padx=padding_x_button, pady=padding_y)
 
+        # LESSON 9
+        lesson_9_label = customtkinter.CTkLabel(
+            master=self, text="Lesson 九", font=("Arial", 20))
+        lesson_9_label.grid(row=11, column=0, padx=padding_x_label, pady=padding_y)
+        chapter_9_pronounce_button = customtkinter.CTkButton(
+            master=self, text="Pronunciation",
+            font=("Arial Bold", 15), 
+            width=110,
+            fg_color=fg_pronounce_color,
+            hover_color=pronounce_hover_color,
+            command=self.start_quiz_chapter_9_pronounce)
+        chapter_9_pronounce_button.grid(row=11, column=1, padx=padding_x_button, pady=padding_y)
+        chapter_9_characters_button = customtkinter.CTkButton(
+            master=self, text="Characters",
+            font=("Arial Bold", 15), 
+            width=110,
+            hover_color="#00D4FF",
+            command=self.start_quiz_chapter_9_characters)
+        chapter_9_characters_button.grid(row=11, column=2, padx=padding_x_button, pady=padding_y)
+        chapter_9_english_button = customtkinter.CTkButton(
+            master=self, text="English", 
+            font=("Arial Bold", 15),
+            width=110,
+            fg_color=fg_english_color,
+            hover_color=english_hover_color,
+            command=self.start_quiz_chapter_9_english)
+        chapter_9_english_button.grid(row=11, column=3, padx=padding_x_button, pady=padding_y)
+
         self.tones_diacritics = {
             'Tone 1: a': ['high flat'],
             'Tone 2: á': ['high falling'],
@@ -692,8 +720,8 @@ class Vocabulary(customtkinter.CTk):
             'pài-sì': ['Thursday', '拜四'],
             'pài-gōo': ['Friday', '拜五'],
             'pài-la̍k': ['Saturday', '拜六'],
-            'le-pài': ['Sunday', 'week', 'church service', '禮拜'],
-            'le-pài-ji̍t': ['Sunday', '禮拜日'],
+            'lé-pài': ['Sunday', 'week', 'church service', '禮拜'],
+            'lé-pài-ji̍t': ['Sunday', '禮拜日'],
             'tsi̍t le-pài': ['one week', '一禮拜'],
             'bô': ['to not have', 'to not exist', 'not', 'no', '無'],
             'bô?': ['(question marker)', 'u+noun/verb/adj--bo?', '無?'],
@@ -719,9 +747,9 @@ class Vocabulary(customtkinter.CTk):
             '拜四': ['Thursday', 'pài-sì', 'pai-si'],
             '拜五': ['Friday', 'pài-gōo', 'pai-goo'],
             '拜六': ['Saturday', 'pài-la̍k', 'pai-lak'],
-            '禮拜': ['Sunday', 'week', 'church service', 'le-pài', 'le-pai'],
-            '禮拜日': ['Sunday', 'le-pài-ji̍t', 'le-pai-jit'],
-            '一禮拜': ['one week', 'tsi̍t le-pài', 'tsit le-pai'],
+            '禮拜': ['Sunday', 'week', 'church service', 'lé-pài', 'le-pai'],
+            '禮拜日': ['Sunday', 'lé-pài-ji̍t', 'le-pai-jit'],
+            '一禮拜': ['one week', 'tsi̍t lé-pài', 'tsit le-pai'],
             '無': ['to not have', 'to not exist', 'not', 'no', 'bô', 'bo'],
             '無?': ['(question marker)', 'u+noun/verb/adj--bo?', 'bô?', 'bo?'],
             '看電影': ['to watch a movie', 'khuànn tiān-iánn', 'khuann tian-iann'],
@@ -780,7 +808,7 @@ class Vocabulary(customtkinter.CTk):
             "suí": ['pretty', 'beautiful', '媠'],
             "bái": ['ugly', 'bad', 'awful', '䆀'],
             "tshiánn-mn̄g": ['may i ask', 'could you please tell me', '(polite)', '請問'],
-            "me-me": ['little sister', 'younger sister', '妺妺'],
+            "me-me": ['little sister', 'younger sister', '妹妹'],
             "ti-ti": ['little brother', 'younger brother', '弟弟'],
             "ia̍h-sī/ah-sī": ['or', '抑是'],
             "tse-tse": ['older sister', 'big sister', '姊姊'],
@@ -803,7 +831,7 @@ class Vocabulary(customtkinter.CTk):
             "媠": ['suí', 'sui', 'pretty', 'beautiful'],
             "䆀": ['bái', 'bai', 'ugly', 'bad', 'awful'],
             "請問": ['tshiánn-mn̄g', 'tshiann-mng', 'may I ask', 'could you please tell me', '(polite)'],
-            "妺妺": ['me-me', 'little sister', 'younger sister'],
+            "妹妹": ['me-me', 'little sister', 'younger sister'],
             "弟弟": ['ti-ti', 'little brother', 'younger brother'],
             "抑是": ['ia̍h-sī/ah-sī', 'iah-si', 'ah-si', 'or'],
             "姊姊": ['tse-tse', 'older sister', 'big sister'],
@@ -826,7 +854,7 @@ class Vocabulary(customtkinter.CTk):
             "pretty/beautiful": ['媠', 'suí', 'sui'],
             "ugly/bad/awful": ['䆀', 'bái', 'bai'],
             "may I ask/could you please tell me/(polite)": ['請問', 'tshiánn-mn̄g', 'tshiann-mng'],
-            "little sister/younger sister": ['妺妺', 'me-me'],
+            "little sister/younger sister": ['妹妹', 'me-me'],
             "little brother/younger brother": ['弟弟', 'ti-ti'],
             "or": ['抑是', 'ia̍h-sī/ah-sī', 'iah-si', 'ah-si'],
             "older sister/big sister": ['姊姊', 'tse-tse'],
@@ -904,10 +932,63 @@ class Vocabulary(customtkinter.CTk):
             'oneself/one\'s own': ['家己', 'ka-kī', 'ka-ki'],
             'to wear/to put on': ['穿', 'tshīng', 'tshing']
         }
-
-
-
-
+        self.chapter_9_pronounce = {
+            "hó-thinn": ["好天", "sunny (day)", 'fair weather'],
+            "thinn-khì": ["天氣", "weather"],
+            "suah": ["煞", "but", 'instead', 'however'],
+            "thàu-hong": ["透風", "to start blowing strong wind"],
+            'hong': ['風', 'wind'],
+            "lo̍h-hōo": ["落雨", "to rain"],
+            "tshut-mn̂g": ["出門", "to go out", 'to leave home'],
+            "mn̂g": ["門", "door"],
+            "hōo-suànn": ["雨傘", "umbrella"],
+            "ak": ["沃", "to water (plants)", 'to drench'],
+            "kah": ["甲", "to the point that", 'until'],
+            "tâm-lok-lok": ["澹漉漉", "to be dripping wet"],
+            "tâm": ["澹", "wet"],
+            "ta": ["焦", "dry"],
+            "kui-sin-khu": ["規身軀", "the whole body", 'from head to toe'],
+            "kui-ê": ["規个", "the whole", 'entire'],
+            "sin-khu": ["身軀", "body"]
+        }
+        self.chapter_9_characters = {
+            '好天': ["hó-thinn", "ho-thinn", "sunny (day)", "fair weather"],
+            '天氣': ["thinn-khì", "thinn-khi", "weather"],
+            '煞': ["suah", "but", "instead", "however"],
+            '透風': ["thàu-hong", "thau-hong", "to start blowing strong wind"],
+            '風': ["hong", "wind"],
+            '落雨': ["lo̍h-hōo", "loh-hoo", "to rain"],
+            '出門': ["tshut-mn̂g", "tshut-mng", "to go out", "to leave home"],
+            '門': ["mn̂g", "mng", "door"],
+            '雨傘': ["hōo-suànn", "hoo-suann", "umbrella"],
+            '沃': ["ak", "to water (plants)", "to drench"],
+            '甲': ["kah", "to the point that", "until"],
+            '澹漉漉': ["tâm-lok-lok", "tam-lok-lok", "to be dripping wet"],
+            '澹': ["tâm", "tam", "wet"],
+            '焦': ["ta", "dry"],
+            '規身軀': ["kui-sin-khu", "the whole body", "from head to toe"],
+            '規个': ["kui-ê", "kui-e", "the whole", "entire"],
+            '身軀': ["sin-khu", "body"]
+        }
+        self.chapter_9_english = {
+            'sunny (day)/fair weather': ["hó-thinn", "ho-thinn", "好天"],
+            'weather': ["thinn-khì", "thinn-khi", "天氣"],
+            'but/instead/however': ["suah", "suah", "煞"],
+            'to start blowing strong wind': ["thàu-hong", "thau-hong", "透風"],
+            'wind': ["hong", "hong", "風"],
+            'to rain': ["lo̍h-hōo", "loh-hoo", "落雨"],
+            'to go out/to leave home': ["tshut-mn̂g", "tshut-mng", "出門"],
+            'door': ["mn̂g", "mng", "門"],
+            'umbrella': ["hōo-suànn", "hoo-suann", "雨傘"],
+            'to water (plants)/to drench': ["ak", "ak", "沃"],
+            'to the point that/until': ["kah", "kah", "甲"],
+            'to be dripping wet': ["tâm-lok-lok", "tam-lok-lok", "澹漉漉"],
+            'wet': ["tâm", "tam", "澹"],
+            'dry': ["ta", "ta", "焦"],
+            'the whole body/from head to toe': ["kui-sin-khu", "kui-sin-khu", "規身軀"],
+            'the whole/entire': ["kui-ê", "kui-e", "規个"],
+            'body': ["sin-khu", "sin-khu", "身軀"]
+        }
 
 
         self.all_pronounce_dict = {}
@@ -919,6 +1000,7 @@ class Vocabulary(customtkinter.CTk):
             self.chapter_5_pronounce,
             self.chapter_6_pronounce,
             self.chapter_7_pronounce, 
+            self.chapter_8_pronounce,
             self.numbers_pronounce
         ]
         for i in self.all_pronounce_list:
@@ -933,6 +1015,7 @@ class Vocabulary(customtkinter.CTk):
             self.chapter_5_characters,
             self.chapter_6_characters,
             self.chapter_7_characters,
+            self.chapter_8_characters,
             self.numbers_characters
         ]
         for i in self.all_character_list:
@@ -947,11 +1030,10 @@ class Vocabulary(customtkinter.CTk):
             self.chapter_5_english, 
             self.chapter_6_english,
             self.chapter_7_english,
+            self.chapter_8_english,
             self.numbers_english
         ]
-        for i in self.all_english_list:
-            self.all_english_dict.update(i)
-
+        
 
     def correct(self, vocab, word):
         # print('是'+'\n')
@@ -1064,6 +1146,13 @@ class Vocabulary(customtkinter.CTk):
         self.quiz(self.chapter_8_characters)
     def start_quiz_chapter_8_english(self):
         self.quiz(self.chapter_8_english)
+
+    def start_quiz_chapter_9_pronounce(self):
+        self.quiz(self.chapter_9_pronounce)
+    def start_quiz_chapter_9_characters(self):
+        self.quiz(self.chapter_9_characters)
+    def start_quiz_chapter_9_english(self):
+        self.quiz(self.chapter_9_english)
 
 # MAKE ANSWERS SMALLER
 # MAKE THE PRONUNCIATION KNOWN???
