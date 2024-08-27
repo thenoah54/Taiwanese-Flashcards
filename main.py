@@ -348,6 +348,35 @@ class Vocabulary(customtkinter.CTk):
             command=self.start_quiz_chapter_9_english)
         chapter_9_english_button.grid(row=11, column=3, padx=padding_x_button, pady=padding_y)
 
+        # LESSON 10
+        lesson_10_label = customtkinter.CTkLabel(
+            master=self, text="Lesson 十", font=("Arial", 20))
+        lesson_10_label.grid(row=12, column=0, padx=padding_x_label, pady=padding_y)
+        chapter_10_pronounce_button = customtkinter.CTkButton(
+            master=self, text="Pronunciation",
+            font=("Arial Bold", 15), 
+            width=110,
+            fg_color=fg_pronounce_color,
+            hover_color=pronounce_hover_color,
+            command=self.start_quiz_chapter_10_pronounce)
+        chapter_10_pronounce_button.grid(row=12, column=1, padx=padding_x_button, pady=padding_y)
+        chapter_10_characters_button = customtkinter.CTkButton(
+            master=self, text="Characters",
+            font=("Arial Bold", 15), 
+            width=110,
+            hover_color="#00D4FF",
+            command=self.start_quiz_chapter_10_characters)
+        chapter_10_characters_button.grid(row=12, column=2, padx=padding_x_button, pady=padding_y)
+        chapter_10_english_button = customtkinter.CTkButton(
+            master=self, text="English", 
+            font=("Arial Bold", 15),
+            width=110,
+            fg_color=fg_english_color,
+            hover_color=english_hover_color,
+            command=self.start_quiz_chapter_10_english)
+        chapter_10_english_button.grid(row=12, column=3, padx=padding_x_button, pady=padding_y)
+
+
         self.tones_diacritics = {
             'Tone 1: a': ['high flat'],
             'Tone 2: á': ['high falling'],
@@ -989,6 +1018,75 @@ class Vocabulary(customtkinter.CTk):
             'the whole/entire': ["kui-ê", "kui-e", "規个"],
             'body': ["sin-khu", "sin-khu", "身軀"]
         }
+        self.chapter_10_pronounce = {
+            'lín tau': ['您兜', 'your place', 'your home'],
+            'tau': ['兜', "one's place", "one's home", '(usu. used with possesive pronoun)'],
+            'ū-kàu': ['有夠', 'so', 'extremely', 'terribly', 'to be enough'],
+            'bô-kàu': ['無夠', 'to not be enough', 'insufficient'],
+            'hn̄g': ['遠', 'far'],
+            'kīn/kūn': ['近', 'close', 'near'],
+            'kiânn': ['行', 'to walk', 'to move (chess, train, ship)', 'to run (machine, device)'],
+            'tsáu': ['走', 'to run', 'to leave', 'to go away'],
+            'tiám-tsing': ['點鐘', 'hour'],
+            'tsı̍t tiám': ['一點', 'one minute'],
+            'hun/hun-tsing': ['分', '分鐘', 'minute'],
+            'bió/bió-tsing': ['秒', '秒鐘', 'second'],
+            'tsiah': ['才', 'and then'],
+            'kàu-uī': ['到位', 'to arrive'],
+            'tó-uī': ['佗位', 'where'],
+            'bô ài': ['無愛', 'to not want to', 'to not feel like', 'to dislike'],
+            'ài': ['愛', 'must', 'to need to', 'to like', 'to feel like (noun)', 'love'],
+            'āu-pái': ['後擺', 'next time'],
+            'tíng-pái': ['頂擺', 'last time'],
+            '--ah': ['矣', '(paritcle of indicating action is):', 'completed', 'change of situation']
+        }
+        self.chapter_10_characters = {
+            '您兜': ['lín tau', 'lin tau', 'your place', 'your home'],
+            '兜': ['tau', "one's place", "one's home", '(usu. used with possesive pronoun)'],
+            '有夠': ['ū-kàu', 'u-kau', 'so', 'extremely', 'terribly', 'to be enough'],
+            '無夠': ['bô-kàu', 'bo-kau', 'to not be enough', 'insufficient'],
+            '遠': ['hn̄g', 'hng', 'far'],
+            '近': ['kīn/kūn', 'kin', 'kun' 'close', 'near'],
+            '行': ['kiânn', 'kiann', 'to walk', 'to move (chess, train, ship)', 'to run (machine, device)'],
+            '走': ['tsáu', 'tsau', 'to run', 'to leave', 'to go away'],
+            '點鐘': ['tiám-tsing', 'tiam-tsing', 'hour'],
+            '一點': ['tsı̍t tiám', 'tsit tiam', 'one minute'],
+            '分/分鐘': ['hun/hun-tsing', 'hun', 'hun-tsing', 'minute'],
+            '秒/秒鐘': ['bió/bió-tsing', 'bio', 'bio-tsing', 'second'],
+            '才': ['tsiah', 'and then'],
+            '到位': ['kàu-uī', 'kau-ui', 'to arrive'],
+            '佗位': ['tó-uī', 'to-ui', 'where'],
+            '無愛': ['bô ài', 'bo ai', 'to not want to', 'to not feel like', 'to dislike'],
+            '愛': ['ài', 'ai', 'must', 'to need to', 'to like', 'to feel like (noun)', 'love'],
+            '後擺': ['āu-pái', 'au-pai', 'next time'],
+            '頂擺': ['tíng-pái', 'ting-pai', 'last time'],
+            '矣': ['--ah', 'ah', '(particle of indicating action is):', 'completed', 'change of situation']
+        }
+        self.chapter_10_english = {
+            'your place/your home': ['lín tau', 'lin tau', '您兜'],
+            "one's place/one's home/(usu. used with possesive pronoun)": ['tau', '兜'],
+            'so/extremely/terribly/to be enough': ['ū-kàu', 'u-kau', '有夠'],
+            'to not be enough/insufficient': ['bô-kàu', 'bo-kau', '無夠'],
+            'far': ['hn̄g', 'hng', '遠'],
+            'close/near': ['kīn/kūn', 'kin', 'kun' '近'],
+            'to walk/to move (chess, train, ship)/to run (machine, device)': ['kiânn', 'kiann', '行'],
+            'to run/to leave/to go away': ['tsáu', 'tsau', '走'],
+            'hour': ['tiám-tsing', 'tiam-tsing', '點鐘'],
+            'one minute': ['tsı̍t tiám', 'tsit tiam', '一點'],
+            'minute': ['hun/hun-tsing', 'hun', 'hun-tsing', '分/分鐘'],
+            'second': ['bió/bió-tsing', 'bio', 'bio-tsing', '秒/秒鐘'],
+            'and then': ['tsiah', '才'],
+            'to arrive': ['kàu-uī', 'kau-ui', '到位'],
+            'where': ['tó-uī', 'to-ui', '佗位'],
+            'to not want to/to not feel like/to dislike': ['bô ài', 'bo ai', '無愛'],
+            'must/to need to/to like/to feel like (noun)/love': ['ài', 'ai', '愛'],
+            'next time': ['āu-pái', 'au-pai', '後擺'],
+            'last time': ['tíng-pái', 'ting-pai', '頂擺'],
+            '(particle of indicating action is)/completed/change of situation': ['--ah', 'ah', '矣']
+        }
+
+
+
 
 
         self.all_pronounce_dict = {}
@@ -1154,6 +1252,15 @@ class Vocabulary(customtkinter.CTk):
     def start_quiz_chapter_9_english(self):
         self.quiz(self.chapter_9_english)
 
+    def start_quiz_chapter_10_pronounce(self):
+        self.quiz(self.chapter_10_pronounce)
+    def start_quiz_chapter_10_characters(self):
+        self.quiz(self.chapter_10_characters)
+    def start_quiz_chapter_10_english(self):
+        self.quiz(self.chapter_10_english)
+
+
+
 # MAKE ANSWERS SMALLER
 # MAKE THE PRONUNCIATION KNOWN???
 class NewWindow(customtkinter.CTkToplevel):
@@ -1187,7 +1294,7 @@ class NewWindow(customtkinter.CTkToplevel):
         self.after(100, self.set_focus)
 
         self.feedback_label = customtkinter.CTkLabel(self, text="",
-                                                font=("Arial", 20) 
+                                                font=("Arial", 14) 
                                                 )
         self.feedback_label.place(relx=0.5, rely=0.6, anchor="center")
         # self.feedback_label.configure(text="CHANGED")
