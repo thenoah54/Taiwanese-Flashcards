@@ -1131,8 +1131,10 @@ class Vocabulary(customtkinter.CTk):
             self.chapter_8_english,
             self.numbers_english
         ]
-        
+        for i in self.all_english_list:
+            self.all_english_dict.update(i)
 
+        
     def correct(self, vocab, word):
         # print('是'+'\n')
         del vocab[word]
@@ -1268,7 +1270,7 @@ class NewWindow(customtkinter.CTkToplevel):
     def __init__(self, master, word, match_answer, quit_state, out_of, remaning):
         super().__init__(master)
         customtkinter.set_appearance_mode("dark")
-        self.geometry(CenterWindow.CenterWindowToDisplay(self, 800, 350, self._get_window_scaling()))
+        # self.geometry(CenterWindow.CenterWindowToDisplay(self, 800, 350, self._get_window_scaling()))
         self.title("")
         # self.wm_attributes("-topmost", True)
         self.minsize(650, 350)
