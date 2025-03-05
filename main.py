@@ -516,7 +516,7 @@ class Vocabulary(customtkinter.CTk):
             "tsah": ["to bring", "紮"],
             "tsē": ["many", "濟"],
             "pîng-iú": ["friend", "朋友"],
-            'hué-tshia/hé-tshia': ['train', '火車'],
+            'hué-tshia': ['train', '火車'],
             'kong-tshia/bah-suh': ['bus', '公車'],
             'kè-thîng-tshia/kè-tîng-tshia': ['taxi', '計程車']
         }
@@ -531,7 +531,7 @@ class Vocabulary(customtkinter.CTk):
             "紮": ["tsah", 'to bring', 'to carry'],
             "濟": ["tse", 'many', 'much', 'plenty'],
             "泡麵": ["phau-mi", 'instant noodles', 'instant ramen'],
-            '火車': ['train', 'hué-tshia', 'hé-tshia'],
+            '火車': ['train', 'hué-tshia', 'hue-tshia'],
             '公車': ['kong-tshia', 'bah-suh', 'bus'],
             '計程車': ['ke-thing-tshia', 'ke-ting-tshia', 'taxi']
         }
@@ -546,7 +546,7 @@ class Vocabulary(customtkinter.CTk):
             'to bring': ['tsah', '紮'],
             'many, much, plenty': ['tse', '濟'],
             'friend': ['ping-iu', '朋友'],
-            'train': ['火車', 'hué-tshia', 'hé-tshia'],
+            'train': ['火車', 'hué-tshia', 'hue-tshia'],
             'bus': ['kong-tshia', 'bah-suh', '公車'],
             'taxi': ['kè-thîng-tshia', 'kè-tîng-tshia', '計程車']
         }
@@ -1025,20 +1025,21 @@ class Vocabulary(customtkinter.CTk):
             'bô-kàu': ['無夠', 'to not be enough', 'insufficient'],
             'hn̄g': ['遠', 'far'],
             'kīn/kūn': ['近', 'close', 'near'],
-            'kiânn': ['行', 'to walk', 'to move (chess, train, ship)', 'to run (machine, device)'],
+            'kiânn': ['行', 'to walk', 'to move', '(chess, train, ship)', 'to run', '(machine, device)'],
             'tsáu': ['走', 'to run', 'to leave', 'to go away'],
             'tiám-tsing': ['點鐘', 'hour'],
-            'tsı̍t tiám': ['一點', 'one minute'],
+            'tsı̍t tiám': ['一點', 'one o clock'],
             'hun/hun-tsing': ['分', '分鐘', 'minute'],
             'bió/bió-tsing': ['秒', '秒鐘', 'second'],
             'tsiah': ['才', 'and then'],
             'kàu-uī': ['到位', 'to arrive'],
             'tó-uī': ['佗位', 'where'],
             'bô ài': ['無愛', 'to not want to', 'to not feel like', 'to dislike'],
-            'ài': ['愛', 'must', 'to need to', 'to like', 'to feel like (noun)', 'love'],
+            'ài': ['愛', 'to like', 'love'],
             'āu-pái': ['後擺', 'next time'],
             'tíng-pái': ['頂擺', 'last time'],
-            '--ah': ['矣', '(paritcle of indicating action is):', 'completed', 'change of situation']
+            '--ah': ['矣', '(paritcle of indicating action is):', 'completed', 'change of situation'],
+            'puànn-tiám-tsing': ['半點鐘', 'half an hour']
         }
         self.chapter_10_characters = {
             '您兜': ['lín tau', 'lin tau', 'your place', 'your home'],
@@ -1050,17 +1051,18 @@ class Vocabulary(customtkinter.CTk):
             '行': ['kiânn', 'kiann', 'to walk', 'to move (chess, train, ship)', 'to run (machine, device)'],
             '走': ['tsáu', 'tsau', 'to run', 'to leave', 'to go away'],
             '點鐘': ['tiám-tsing', 'tiam-tsing', 'hour'],
-            '一點': ['tsı̍t tiám', 'tsit tiam', 'one minute'],
+            '一點': ['tsı̍t tiám', 'tsit tiam', 'one o clock'],
             '分/分鐘': ['hun/hun-tsing', 'hun', 'hun-tsing', 'minute'],
             '秒/秒鐘': ['bió/bió-tsing', 'bio', 'bio-tsing', 'second'],
             '才': ['tsiah', 'and then'],
             '到位': ['kàu-uī', 'kau-ui', 'to arrive'],
             '佗位': ['tó-uī', 'to-ui', 'where'],
             '無愛': ['bô ài', 'bo ai', 'to not want to', 'to not feel like', 'to dislike'],
-            '愛': ['ài', 'ai', 'must', 'to need to', 'to like', 'to feel like (noun)', 'love'],
+            '愛': ['ài', 'ai', 'to like', 'love'],
             '後擺': ['āu-pái', 'au-pai', 'next time'],
             '頂擺': ['tíng-pái', 'ting-pai', 'last time'],
-            '矣': ['--ah', 'ah', '(particle of indicating action is):', 'completed', 'change of situation']
+            '矣': ['--ah', 'ah', 'completed', 'change of situation'],
+            '半點鐘': ['puann tiam-tsing', 'puànn-tiám-tsing', 'half an hour']
         }
         self.chapter_10_english = {
             'your place/your home': ['lín tau', 'lin tau', '您兜'],
@@ -1068,26 +1070,23 @@ class Vocabulary(customtkinter.CTk):
             'so/extremely/terribly/to be enough': ['ū-kàu', 'u-kau', '有夠'],
             'to not be enough/insufficient': ['bô-kàu', 'bo-kau', '無夠'],
             'far': ['hn̄g', 'hng', '遠'],
-            'close/near': ['kīn/kūn', 'kin', 'kun' '近'],
+            'close/near': ['kīn/kūn', 'kin', 'kun', '近'],
             'to walk/to move (chess, train, ship)/to run (machine, device)': ['kiânn', 'kiann', '行'],
             'to run/to leave/to go away': ['tsáu', 'tsau', '走'],
             'hour': ['tiám-tsing', 'tiam-tsing', '點鐘'],
-            'one minute': ['tsı̍t tiám', 'tsit tiam', '一點'],
+            'one o clock': ['tsı̍t tiám', 'tsit tiam', '一點'],
             'minute': ['hun/hun-tsing', 'hun', 'hun-tsing', '分/分鐘'],
             'second': ['bió/bió-tsing', 'bio', 'bio-tsing', '秒/秒鐘'],
             'and then': ['tsiah', '才'],
             'to arrive': ['kàu-uī', 'kau-ui', '到位'],
             'where': ['tó-uī', 'to-ui', '佗位'],
-            'to not want to/to not feel like/to dislike': ['bô ài', 'bo ai', '無愛'],
-            'must/to need to/to like/to feel like (noun)/love': ['ài', 'ai', '愛'],
+            'to dislike': ['bô ài', 'bo ai', '無愛'],
+            'to like/love': ['ài', 'ai', '愛'],
             'next time': ['āu-pái', 'au-pai', '後擺'],
             'last time': ['tíng-pái', 'ting-pai', '頂擺'],
-            '(particle of indicating action is)/completed/change of situation': ['--ah', 'ah', '矣']
+            '(particle of indicating action is)/completed/change of situatfion': ['--ah', 'ah', '矣'],
+            'half an hour': ['puann tiam-tsing', 'puànn-tiám-tsing', '半點鐘']
         }
-
-
-
-
 
         self.all_pronounce_dict = {}
         self.all_pronounce_list = [
@@ -1270,11 +1269,12 @@ class NewWindow(customtkinter.CTkToplevel):
     def __init__(self, master, word, match_answer, quit_state, out_of, remaning):
         super().__init__(master)
         customtkinter.set_appearance_mode("dark")
-        # self.geometry(CenterWindow.CenterWindowToDisplay(self, 800, 350, self._get_window_scaling()))
+        # centers window
+        self.geometry(CenterWindow.CenterWindowToDisplay(self, 800, 350, self._get_window_scaling()))
         self.title("")
         # self.wm_attributes("-topmost", True)
-        self.minsize(650, 350)
-        self.maxsize(900, 350)
+        self.minsize(900, 350)
+        self.maxsize(950, 350)
 
         self.answer = ""
         self.match_answer = match_answer
