@@ -5,7 +5,7 @@ import customtkinter
 import copy
 
 class Vocabulary(customtkinter.CTk):
-    # Main window
+    # Main window 
     def __init__(self):
         super().__init__()
         self.geometry(CenterWindow.CenterWindowToDisplay(self, 500, 500, self._get_window_scaling()))
